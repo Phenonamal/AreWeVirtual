@@ -1,12 +1,12 @@
 # AreWeVirtual
 
-####Hey, this is are we virtual which is a 3D MMO RPG game with a lot of plot twists.
+#### Hey, this is are we virtual which is a 3D MMO RPG game with a lot of plot twists.
 
 
-###Changelog:
+### Changelog:
 
 
-*Nothing Here yet
+* Nothing Here yet
 
 ---
 
