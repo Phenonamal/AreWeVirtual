@@ -63,6 +63,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Resolutions.cs" />
     <Compile Include="Assets\Scripts\UIController\Exit.cs" />
+    <Compile Include="Assets\Scripts\UIController\OptionsControlelr.cs" />
+    <Compile Include="Assets\Scripts\UIController\PlayButtonController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Dell/Documents/GitHub/AreWeVirtual/AreWeVirtual/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
