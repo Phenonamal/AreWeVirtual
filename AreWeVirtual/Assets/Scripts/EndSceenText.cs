@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class EndSceenText : MonoBehaviour {
     [SerializeField] private TextMeshPro TextUI;
+    private float rotationSpeed = 18.5f;
 
-    public void TurningText()
+    void Update()
     {
-        Vector3 t = transform.rotation
+        
+        TextUI.transform.rotation = Quaternion.AngleAxis(Time.time *  rotationSpeed, Vector3.up);
     }
 
 }

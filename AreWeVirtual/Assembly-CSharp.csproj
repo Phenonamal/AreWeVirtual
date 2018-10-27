@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AvatarScript.cs" />
+    <Compile Include="Assets\Scripts\CreditsCamera.cs" />
     <Compile Include="Assets\Scripts\EndSceenText.cs" />
     <Compile Include="Assets\Scripts\LevelCamera.cs" />
     <Compile Include="Assets\Scripts\LevelComplete.cs" />
