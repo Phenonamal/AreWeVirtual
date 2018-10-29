@@ -11,13 +11,13 @@ public class CreditsCamera : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    if (Time.time < 33f)
+	    if (Time.time < 35f)
 	    {
 
 	        _CreditsCamera.transform.position -= new Vector3(0, Time.deltaTime * scrollSpeed, 0);
 	    }
 
-	    if (Time.time > 40f)
+	    if (Time.time > 42f)
 	    {
             Application.Quit();
 	    }
