@@ -9,6 +9,10 @@ public class AvatarScript : MonoBehaviour {
     float moveSpeed = 10f;
     new Camera camera;
     Vector3 cameraOffset;
+    bool jump; float jumpVelocity = 5f;
+
+    public bool isHacking;
+    public System.Action<bool> OnHackingStateChangeEvent;
 
     // ==================================
 
@@ -40,7 +44,11 @@ public class AvatarScript : MonoBehaviour {
 
     // ==================================
 
-
+    public void SetHackingState(bool value)
+    {
+        isHacking = value;
+        if (OnHackingStateChangeEvent != null) OnHackingStateChangeEvent(value);
+    }
 
     // ==================================
 
@@ -56,14 +64,22 @@ public class AvatarScript : MonoBehaviour {
 
     void HandleInput()
     {
-        Vector3 input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Fire1"), Input.GetAxis("Vertical"));
+        Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         moveDirection = Vector3.ClampMagnitude(input, 1f);
+        if (isHacking) moveDirection = Vector3.zero;
+
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) SetHackingState(!isHacking);
+        if (Input.GetKeyDown(KeyCode.Escape)) SetHackingState(false);
+
+        if(Input.GetKeyDown(KeyCode.Space))jump = true;
     }
 
     void HandleMovement(float deltaTime)
     {
         Vector3 p = transform.position + moveDirection * deltaTime * moveSpeed;
         rigidbody.MovePosition(p);
+
+        if (jump) { jump = false;rigidbody.AddForce(Vector3.up*jumpVelocity, ForceMode.VelocityChange); }
 
         if (p.y < -2f) SceneManager.LoadScene(0);
     }
