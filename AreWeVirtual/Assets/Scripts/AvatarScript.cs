@@ -71,7 +71,7 @@ public class AvatarScript : MonoBehaviour {
     void UpdateCamera()
     {
         Vector3 p = this.transform.position + cameraOffset;
-        p.x = 0f;
+        //p.x = 0f;
         camera.transform.position = p;
     }
 }
