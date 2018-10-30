@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -153,6 +153,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1746999954426592, guid: ac785979bc3c14e4b992434aace4a3f1, type: 2}
+      propertyPath: m_TagString
+      value: floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac785979bc3c14e4b992434aace4a3f1, type: 2}
   m_IsPrefabAsset: 0
@@ -238,25 +242,9 @@ MonoBehaviour:
   Enemy: {fileID: 900345791}
   speed: 2
   Avatar: {fileID: 893373453}
-  PlayerRadius: {fileID: 0}
-  EnemyRadius: {fileID: 900345798}
---- !u!143 &900345798
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 900345791}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  rigidbody: {fileID: 0}
+  jumpVelocity: 3
+  isTouchingFloor: 0
 --- !u!1001 &1043374681
 Prefab:
   m_ObjectHideFlags: 0
@@ -495,8 +483,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1467692522130460, guid: 16abe2f310e980c4a832fc8bddc8399f, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23453169958457360, guid: 16abe2f310e980c4a832fc8bddc8399f,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2eac935d237a60f4ca27e0ca897e856d, type: 2}
+    - target: {fileID: 23555831276014006, guid: 16abe2f310e980c4a832fc8bddc8399f,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2eac935d237a60f4ca27e0ca897e856d, type: 2}
+    - target: {fileID: 23318797482920462, guid: 16abe2f310e980c4a832fc8bddc8399f,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2eac935d237a60f4ca27e0ca897e856d, type: 2}
+    - target: {fileID: 114436097432225608, guid: 16abe2f310e980c4a832fc8bddc8399f,
+        type: 2}
+      propertyPath: isHacking
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114436097432225608, guid: 16abe2f310e980c4a832fc8bddc8399f, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 16abe2f310e980c4a832fc8bddc8399f, type: 2}
   m_IsPrefabAsset: 0
