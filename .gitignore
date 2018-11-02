@@ -35,3 +35,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.log
+AreWeVirtual/.vs/AreWeVirtual/v15/.suo
+AreWeVirtual/.vs/AreWeVirtual/v15/Server/sqlite3/storage.ide-shm
+AreWeVirtual/Library/CurrentLayout.dwlt
+AreWeVirtual/Library/shadercompiler-UnityShaderCompiler.exe0.log

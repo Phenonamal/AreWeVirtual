@@ -35,7 +35,12 @@ public class EnemyController : MonoBehaviour
             Enemy.transform.position += new Vector3(Avatar.transform.position.x / 4, 0, Avatar.transform.position.x / 2);
         }
         */
-        Enemy.transform.LookAt(Avatar.transform);
+
+        //Enemy.transform.LookAt(Avatar.transform);
+
+        Vector3 NewVector = Avatar.transform.position - Enemy.transform.position;
+        NewVector.y = 0f;
+        Enemy.transform.rotation = Quaternion.LookRotation(NewVector);
 
         EnemyRangeHandler();
     }
@@ -44,17 +49,17 @@ public class EnemyController : MonoBehaviour
     {
         Vector3 NewVector = Avatar.transform.position - Enemy.transform.position;
 
-    float Length = NewVector.magnitude;
+        float Length = NewVector.magnitude;
 
-        NewRange = Length - range;
+        //    NewRange = Length - range;
 
-
-    if (NewRange < range)
+        if (Length < range)
+        //if (NewRange < range)
         {
             if (isTouchingFloor == true)
             {
                 rigidbody.AddForce(Vector3.up * jumpVelocity, ForceMode.VelocityChange);
-                rigidbody.MovePosition(Vector3.forward * speed);
+                //rigidbody.MovePosition(Vector3.forward * speed);
                 isTouchingFloor = false;
             } else
             {
@@ -67,7 +72,14 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("floor"))
         {
-            isTouchingFloor = true;
+            if(IsTouching(collision)) isTouchingFloor = true;
         }
+    }
+
+    bool IsTouching(Collision collision)
+    {
+        foreach (ContactPoint c in collision.contacts)
+            if (c.normal.y > Mathf.Epsilon) return true;
+        return false;
     }
 }
