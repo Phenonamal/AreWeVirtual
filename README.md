@@ -1,23 +1,14 @@
-<<<<<<< HEAD
 # AreWeVirtual
 
-#### Hey, this is are we virtual which is a 3D MMO RPG game with a lot of plot twists.
-
-
-### Changelog:
-
-
-* Nothing Here yet
-
----
+#### Hey, welcome to the game AreWeVirtual?
 
 >This game is copyrighted by YamoshiGamesStudios.
-=======
-#### Hey, this is are we virtual which is a 3D MMO RPG game with a lot of plot twists.
+
+#### Are we virtual is going to be a 3D MMO RPG game with a lot of plot twists.
+It's a digital world within a digital world etc.
+We'll evolve it as developers join. (So don't expect us to have all the answers yet)
 
 ### Changelog:
-
+```
 * Nothing Here yet
-
-> This game is copyrighted by YamoshiGamesStudios.
->>>>>>> Scripts
+```
