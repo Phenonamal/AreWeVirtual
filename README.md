@@ -1,12 +1,11 @@
 # AreWeVirtual
 
-#### Hey, welcome to the game AreWeVirtual?
+#### Hey, welcome to the game AreWeVirtual
 
 >This game is copyrighted by YamoshiGamesStudios.
 
-#### Are we virtual is going to be a 3D MMO RPG game with a lot of plot twists.
-It's a digital world within a digital world etc.
-We'll evolve it as developers join. (So don't expect us to have all the answers yet)
+#### AreWeVirtual is a game series that is to come.
+It's series are all based of the main MMMO 3D RPG game that is intended to be.
 
 ### Changelog:
 ```
